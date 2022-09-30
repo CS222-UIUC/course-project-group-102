@@ -16,6 +16,6 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Action ESLint
-  	uses: sibiraj-s/action-eslint@v2.1.2
+  	    uses: sibiraj-s/action-eslint@v2.1.2
 
 

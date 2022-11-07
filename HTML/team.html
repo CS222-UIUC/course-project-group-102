@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS" />
+    <meta name="description" content="..." />
+    <title>Wall Street, Your Street</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+
+      /* Style the header */
+      .header {
+        padding: 80px;
+        text-align: center;
+        background: #1abc9c;
+        color: white;
+      }
+
+      /* Style the top navigation bar */
+      .navbar {
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      /* Style the navigation bar links */
+      .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+
+      /* Change color on hover */
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* Change color on click */
+      .navbar a:after {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* Column container */
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      /* Create two equal columns that sits next to each other */
+      /* Sidebar/left column */
+      .side {
+        flex: 70%;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+
+      /* Main column */
+      .main {
+        flex: 30%;
+        background-color: white;
+        padding: 0px;
+      }
+
+      /* Fake image, placeholder */
+      .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
+
+      /* Fake image, placeholder */
+      .fake_us {
+        background-color: #aaa;
+        width: 100px;
+        padding: 20px;
+        border-radius: 50px;
+      }
+
+      .panel {
+        padding: 0 18px;
+        background-color: white;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Wall Street, Your Street</h1>
+      <p>Background info about project</p>
+    </div>
+
+    <div class="row">
+      <div class="side">
+        <h2>Graph</h2>
+        <div class="fakeimg" style="height: 500px">Graph img</div>
+      </div>
+      <div class="main">
+        <div class="navbar">
+          <a href="./team.html" class="right">Team</a>
+          <a href="./about.html" class="right">About</a>
+          <a href="./about.html" class="right">Key</a>
+        </div>
+        <div class="panel">
+            <h3>Team</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
+              dignissimos excepturi ullam delectus cupiditate, veniam quidem labore
+              eligendi quisquam obcaecati.
+            </p>
+            <div class="fake_us" style="height: 100px">Person 1</div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="fake_us" style="height: 100px">Person 2</div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="fake_us" style="height: 100px">Person 3</div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="fake_us" style="height: 100px">Person 4</div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <h2>Footer</h2>
+    </div>
+  </body>
+</html>

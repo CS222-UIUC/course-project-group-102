@@ -19,24 +19,25 @@
         background-size: cover;
         background-position: center;
       }
+     
     </style>
   </head>
   <body>
     <div class="header">
       <h1>Wall Street, Your Street</h1>
-      <p>Background info about project</p>
+      <p>Machine Learning algorithm showing the correlation between the stock market and housing prices</p>
     </div>
 
     <div class="row">
       <div class="side">
         <h2>Graph</h2>
-        <div class="fakeimg" style="height: 500px">Graph img</div>
+        <div class="fakeimg" style="height: 500px"><img src="https://cdn-res.keymedia.com/cms/images/us/077/0311_638037597285663233.jpg" alt="Graph" style="width:900px;height:450px;border-radius:0px;"></div>
       </div>
       <div class="main">
         <div class="navbar">
           <a href="{{ url_for('team' ) }}" class="right">Team</a>
           <a href="{{ url_for('about' ) }}" class="right">About</a>
-          <a href="{{ url_for('key' ) }}" class="right">Key</a>
+          <a href="{{ url_for('key' ) }}" class="right">Visualizations</a>
         </div>
         <div class="panel">
           <h3>About</h3>
@@ -56,3 +57,4 @@
     </div>
   </body>
 </html>
+

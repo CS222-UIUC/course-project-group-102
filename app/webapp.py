@@ -43,3 +43,14 @@ def key():
 def about():    
     return render_template('about.html')
 
+@app.route('/chart', methods=['GET', 'POST'])
+def chart():
+    if request.method == "POST":
+        stockprice = request.form.get("stockprice")
+        stock(stockprice)
+        X = pd.DataFrame([stockprice])
+        prediction = model.predict(np.array(X).reshape(-1, 1))[0]
+    else:
+        prediction = ""    
+    return render_template('chart.html', output = prediction)
+

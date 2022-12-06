@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+
+    <body>
+        <div class="ct-chart ct-perfect-fourth"></div>
+        <form name="form", method="POST", style="text-align: center;", onsumbit="updateLabels">
+            <br>
+            Stock Price: <input type="number" id = "input" step="any" name="stockprice" placeholder="Enter a stock price" required/>
+            <br><br>
+            <button id = "submit" value="Submit" onclick="update();">Submit</button>
+        </form>
+        <p style="text-align: center;" id = "output">{{ output }}</p>
+        <br>
+        <button id = "init" value="Graph" onclick="init();">Sample Graph</button>
+        <p id ="pText"></p>
+   
+
+        <script>
+            var myChart;
+            //stock_price = document.getElementById('price').value;
+            var labels = ['1200', '1300', '1400', '1500', '1600']
+            var series = [141507.09568652257, 144496.9397436165, 147486.78380071046, 150476.62785780441, 153466.47191489834]
+            var data = {
+            // A labels array that can contain any sort of values
+            labels: labels,
+            // Our series array that contains series objects or in this case series data arrays
+            series: [
+                series
+            ]
+        };
+        myChart = new Chartist.Line('.ct-chart', data);
+
+    function update() {
+        var stock_price = parseInt(document.getElementById('input').value);
+        console.log(stock_price);
+        var house_price = document.getElementById('output').innerHTML;
+        labels.push(stock_price.toString());
+        series.push(house_price);
+        // var pval = ""
+        // for(i = 0; i < series.length; i++){
+        //     pval = pval + series[i] + "<br/>";
+        // }
+        // document.getElementById('pText').innerHTML = pval
+        var data = {
+            // A labels array that can contain any sort of values
+            labels: labels,
+            // Our series array that contains series objects or in this case series data arrays
+            series: [
+                series
+            ]
+        };
+        console.log(labels);
+        console.log(series);
+      myChart.update(data);
+    }
+
+$("#submit").on('click', update());
+
+        </script>
+    </body>
+</html>

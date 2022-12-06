@@ -15,14 +15,22 @@ if __name__ == "main":
 def index():
     if request.method == "POST":
         stockprice = request.form.get("stockprice")
-        print(stockprice)
+        stock(stockprice)
         X = pd.DataFrame([stockprice])
         prediction = model.predict(np.array(X).reshape(-1, 1))[0]
-        
-
     else:
         prediction = ""
-    return render_template('index.html', output = prediction)
+    return render_template('chart.html', output = prediction)
+
+@app.route('/stock')
+def stock(stockprice):
+    return stockprice
+
+@app.route('/pred')
+def pred(stockprice):
+    X = pd.DataFrame([stockprice])
+    prediction = model.predict(np.array(X).reshape(-1, 1))[0]
+    return prediction
 
 @app.route('/team')
 def team():    

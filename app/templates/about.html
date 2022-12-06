@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="HTML, CSS" />
     <meta name="description" content="..." />
-    <link rel="stylesheet" href="CSS_code/styles.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS_code/styles.css')}}" />
     <title>Wall Street, Your Street</title>
 
     <style>
@@ -15,7 +15,7 @@
         padding: 80px;
         text-align: center;
         color: white;
-        background-image: url(Images/Header_bg.jpg);
+        background-image: url("{{ url_for('static', filename='Images/Header_bg.jpg' ) }}");
         background-size: cover;
         background-position: center;
       }
@@ -34,16 +34,18 @@
       </div>
       <div class="main">
         <div class="navbar">
-          <a href="./team.html" class="right">Team</a>
-          <a href="./about.html" class="right">About</a>
-          <a href="./key.html" class="right">Key</a>
+          <a href="{{ url_for('team' ) }}" class="right">Team</a>
+          <a href="{{ url_for('about' ) }}" class="right">About</a>
+          <a href="{{ url_for('key' ) }}" class="right">Key</a>
         </div>
         <div class="panel">
           <h3>About</h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
-            dignissimos excepturi ullam delectus cupiditate, veniam quidem
-            labore eligendi quisquam obcaecati.
+            Unbeknownist to many, the fluctuations of the stock market have an important impact on the price of rent.
+            We want to show this correlation, so we trained a machine learning algorithm that predicts the cost of a house,
+            given a certain S&P index. We found that in economic recessions, the price of a home tends to go up - leaving
+            many American families struggling to pay rent in a struggling economy with high unemplyment. We hope this information
+            will empower people to advocate for legislative actions and policies that aid families when faced with such renters crises.
           </p>
         </div>
       </div>

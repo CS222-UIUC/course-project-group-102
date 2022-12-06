@@ -7,14 +7,14 @@
     <meta name="keywords" content="HTML, CSS" />
     <meta name="description" content="..." />
     <title>Wall Street, Your Street</title>
-    <link rel="stylesheet" href="CSS_code/styles.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS_code/styles.css')}}" />
     <style>
       /* Style the header */
       .header {
         padding: 80px;
         text-align: center;
         color: white;
-        background-image: url(Images/Header_bg.jpg);
+        background-image: url("{{ url_for('static', filename='Images/Header_bg.jpg' ) }}");
         background-size: cover;
         background-position: center;
       }
@@ -33,6 +33,7 @@
         background-color: #ddd;
         color: black;
       }
+      
     </style>
   </head>
   <body>
@@ -48,9 +49,9 @@
       </div>
       <div class="main">
         <div class="navbar">
-          <a href="./team.html" class="right">Team</a>
-          <a href="./about.html" class="right">About</a>
-          <a href="./key.html" class="right">Key</a>
+          <a href="{{ url_for('team' ) }}" class="right">Team</a>
+          <a href="{{ url_for('about' ) }}" class="right">About</a>
+          <a href="{{ url_for('key' ) }}" class="right">Key</a>
         </div>
         <div class="panel">
           <h3>Key</h3>

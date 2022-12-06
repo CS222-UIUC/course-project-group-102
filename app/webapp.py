@@ -4,8 +4,7 @@ import pickle
 import numpy as np
 
 
-app = Flask("WallStreet and Your Street")
-
+app = Flask("WallStreet and Your Street", static_folder="static")
 model = pickle.load(open("model.pkl", "rb"))
 
 if __name__ == "main":

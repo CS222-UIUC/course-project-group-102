@@ -19,6 +19,90 @@
         background-size: cover;
         background-position: center;
       }
+      body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+
+  /* Style the top navigation bar */
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  /* Style the navigation bar links */
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+
+  /* Change color on hover */
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /* Change color on click */
+  .navbar a:after {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /* Column container */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Create two equal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    flex: 70%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+
+  /* Main column */
+  .main {
+    flex: 30%;
+    background-color: black;
+    color: white;
+    padding: 0px;
+  }
+
+  /* Fake image, placeholder */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Fake image, placeholder */
+  .fake_us {
+    background-color: #aaa;
+    width: 100px;
+    padding: 20px;
+    border-radius: 50px;
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: transparent;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+  }
     </style>
   </head>
   <body>

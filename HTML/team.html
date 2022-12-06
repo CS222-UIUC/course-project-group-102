@@ -7,103 +7,27 @@
     <meta name="keywords" content="HTML, CSS" />
     <meta name="description" content="..." />
     <title>Wall Street, Your Street</title>
+    <link rel="stylesheet" href="CSS_code/styles.css">
+
     <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-      }
-
       /* Style the header */
       .header {
         padding: 80px;
         text-align: center;
-        background: #1abc9c;
         color: white;
+        background-image: url(Images/Header_bg.jpg); 
+        background-size: cover; 
+        background-position: center;
       }
 
-      /* Style the top navigation bar */
-      .navbar {
-        overflow: hidden;
-        background-color: #333;
-      }
-
-      /* Style the navigation bar links */
-      .navbar a {
-        float: left;
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 15px 15px;
-        text-decoration: none;
-        margin-left: 10px;
-      }
-
-      /* Change color on hover */
-      .navbar a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-
-      /* Change color on click */
-      .navbar a:after {
-        background-color: #ddd;
-        color: black;
-      }
-
-      /* Column container */
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      /* Create two equal columns that sits next to each other */
-      /* Sidebar/left column */
-      .side {
-        flex: 70%;
-        background-color: #f1f1f1;
-        padding: 20px;
-      }
-
-      /* Main column */
-      .main {
-        flex: 30%;
-        background-color: white;
-        padding: 0px;
-      }
-
-      /* Fake image, placeholder */
-      .fakeimg {
-        background-color: #aaa;
-        width: 100%;
-        padding: 20px;
-      }
-
-      /* Fake image, placeholder */
-      .fake_us {
-        background-color: #aaa;
-        width: 100px;
-        padding: 20px;
-        border-radius: 50px;
-      }
-
-      .panel {
-        padding: 0 18px;
-        background-color: white;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-      }
-
-      /* Footer */
-      .footer {
-        padding: 20px;
-        text-align: center;
-        background: #ddd;
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        object-fit: cover;
       }
     </style>
+    
   </head>
   <body>
     <div class="header">
@@ -120,7 +44,7 @@
         <div class="navbar">
           <a href="./team.html" class="right">Team</a>
           <a href="./about.html" class="right">About</a>
-          <a href="./about.html" class="right">Key</a>
+          <a href="./key.html" class="right">Key</a>
         </div>
         <div class="panel">
             <h3>Team</h3>
@@ -129,13 +53,15 @@
               dignissimos excepturi ullam delectus cupiditate, veniam quidem labore
               eligendi quisquam obcaecati.
             </p>
-            <div class="fake_us" style="height: 100px">Person 1</div>
+            <img src="./Images/areeba_222 - Copy.jpg" alt="Picture of Areeba">
+            <h4>Areeba Rashid</h4>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <div class="fake_us" style="height: 100px">Person 2</div>
+            <img src="./Images/Renorman_222.jpg" alt="Picture of Rory">
+            <h4>Rory Norman</h4>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <div class="fake_us" style="height: 100px">Person 3</div>
+            <div class="fake_us" style="height: 100px">Foziea Garada</div>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <div class="fake_us" style="height: 100px">Person 4</div>
+            <div class="fake_us" style="height: 100px">Ishq Gupta</div>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
       </div>

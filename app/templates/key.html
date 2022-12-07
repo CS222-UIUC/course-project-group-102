@@ -33,37 +33,56 @@
         background-color: #ddd;
         color: black;
       }
-      
     </style>
   </head>
   <body>
     <div class="header">
       <h1>Wall Street, Your Street</h1>
-      <p>Background info about project</p>
+      <p>Machine Learning algorithm showing the correlation between the stock market and housing prices</p>
     </div>
 
     <div class="row">
       <div class="side">
         <h2>Graph</h2>
-        <div class="fakeimg" style="height: 500px">Graph img</div>
+        <div class="fakeimg" style="height: 500px">
+          <img  src =""  id = "image" style="width:800px;height:450px;border-radius:0px;"/>
+        </div>
       </div>
       <div class="main">
         <div class="navbar">
-          <a href="{{ url_for('team' ) }}" class="right">Team</a>
-          <a href="{{ url_for('about' ) }}" class="right">About</a>
-          <a href="{{ url_for('key' ) }}" class="right">Key</a>
+          <a href="{{ url_for('team') }}" class="right">Team</a>
+          <a href="{{ url_for('about') }}" class="right">About</a>
+          <a href="{{ url_for('key') }}" class="right">Key</a>
+          <a href = "{{ url_for('chart') }}" class="right">Interactive Graph</a>
         </div>
         <div class="panel">
-          <h3>Key</h3>
+          <h3>Visualizations</h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
-            dignissimos excepturi ullam delectus cupiditate, veniam quidem
-            labore eligendi quisquam obcaecati.
+            Select two buttons to see a data visualization representing the correlation between those two keys:
           </p>
-          <button>key one</button>
-          <button>key two</button>
-          <button>key three</button>
-          <button>key four</button>
+          <button>Time</button>
+          <button>S&P Index</button>
+          <button>Housing Prices</button>
+          <button id = "g1" onclick="show1()">Graph1</button>
+          <script>
+            function show1() {
+                /* Get image and change value
+                of src attribute */
+                let image = document.getElementById("image");
+                image.src =
+                "{{url_for('static', filename = 'Images/Updated_Stock_House_Viz_222.png')}}"
+            }
+        </script>
+          <button id = "g2" onclick="show2()">Graph2</button>
+          <script>
+            function show2() {
+                /* Get image and change value
+                of src attribute */
+                let image = document.getElementById("image");
+                image.src =
+                "{{url_for('static', filename = 'Images/graph2.png')}}"
+            }
+        </script>
         </div>
       </div>
     </div>

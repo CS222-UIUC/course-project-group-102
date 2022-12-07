@@ -58,7 +58,22 @@
       myChart.update(data);
     }
 
+    function reset() {
+        var labels = ['1200', '1300', '1400', '1500', '1600']
+            var series = [141507.09568652257, 144496.9397436165, 147486.78380071046, 150476.62785780441, 153466.47191489834]
+            var data = {
+            // A labels array that can contain any sort of values
+            labels: labels,
+            // Our series array that contains series objects or in this case series data arrays
+            series: [
+                series
+            ]
+        };
+        myChart = new Chartist.Line('.ct-chart', data);
+    }
+
 $("#submit").on('click', update());
+$("#init").on('click', reset());
 
         </script>
     </body>

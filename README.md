@@ -6,6 +6,8 @@ Created by Foziea Garada, Rory Norman, Areeba Rashid, Ishq Gupta for CS 222 at U
 The goal of this project was to create a Machine Learning algorithm that predicts the behavior of the housing market based on the stock market and then represent the data and its relationships through interactive data visualizations that can be used to raise awareness for housing issues. We envision researchers and users alike to use this information and increase their awareness, as well as possibly use it for advocacy. We are glad to contribute to the efforts of many to address, in our own way, the issue of housing crises in the U.S.
 
 # Technical Architecture
+![CS222_Technical_Architecture_FA_22](https://user-images.githubusercontent.com/81365867/206342203-8c6bcb1d-9f70-4050-a290-87c243420446.png)
+
 
 # Access
 Instructions found on the site: 
